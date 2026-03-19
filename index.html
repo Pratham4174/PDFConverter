@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>git add README.md
+<head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>ResumeSync — ATS Optimizer</title>
@@ -629,7 +629,12 @@ Respond ONLY with a JSON object in this exact format (no markdown, no backticks)
   "matchScore": "X% keyword match with job description"
 }`;
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  // Auto-detect backend URL: same origin in production, localhost in dev
+  const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:3000/api/optimize'
+    : '/api/optimize';
+
+  const response = await fetch(API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
