@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/api/convert", "dest": "/api/convert.js" },
+    { "src": "/api/optimize", "dest": "/api/optimize.js" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ],
+  "functions": {
+    "api/convert.js": {
+      "maxDuration": 30,
+      "memory": 1024
+    },
+    "api/optimize.js": {
+      "maxDuration": 30,
+      "memory": 512
+    }
+  }
+}

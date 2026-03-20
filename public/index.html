@@ -82,7 +82,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:28p
     <div class="logo">File<span>Forge</span></div>
     <div class="nav-links">
       <span class="nav-link active" id="tab-convert-btn" onclick="switchTab('convert')">CONVERTER</span>
-
+      
     </div>
   </header>
 
@@ -244,7 +244,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:28p
       </div>
       <div>
         <div style="font-family:'DM Mono',monospace;font-size:10px;color:#5a5f7a;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">PDF Conversions</div>
-        <ul style="list-style:none;font-size:12px;color:#5a5f7a;line-height:2.2">
+        <ul style="list-style:none;font-size:12px;color:#5a5f7a;line-height:2.2"> 
           <li><a href="#" onclick="preselectConversion('pdf','docx');return false;" style="color:#5a5f7a;text-decoration:none;hover:color:#eef0f8">PDF to Word (DOCX)</a></li>
           <li><a href="#" onclick="preselectConversion('pdf','txt');return false;" style="color:#5a5f7a;text-decoration:none">PDF to TXT</a></li>
           <li><a href="#" onclick="preselectConversion('pdf','jpg');return false;" style="color:#5a5f7a;text-decoration:none">PDF to JPG</a></li>
@@ -319,7 +319,7 @@ function preselectConversion(fromExt, toFmt) {
   // Scroll to converter
   document.querySelector('.converter').scrollIntoView({behavior:'smooth',block:'start'});
 }
-function apiUrl(p){const h=window.location.hostname;return(h&&h!=='localhost'&&h!=='127.0.0.1'&&!h.startsWith('192.'))?p:'http://localhost:3000'+p;}
+function apiUrl(p){const h=window.location.hostname;const isLocal=!h||h==='localhost'||h==='127.0.0.1'||h.startsWith('192.');return isLocal?'http://localhost:3000'+p:p;}
 const CONV_MAP={pdf:['docx','txt','jpg','png'],docx:['pdf'],doc:['pdf'],jpg:['pdf','png','webp','bmp'],jpeg:['pdf','png','webp','bmp'],png:['pdf','jpg','webp','bmp'],webp:['pdf','jpg','png','bmp'],bmp:['pdf','jpg','png','webp'],gif:['pdf','jpg','png'],tiff:['pdf','jpg','png'],tif:['pdf','jpg','png'],xlsx:['pdf','csv'],xls:['pdf','csv'],csv:['pdf','xlsx'],txt:['pdf'],md:['pdf']};
 const FMT_ICONS={pdf:'📄',docx:'📝',txt:'📃',jpg:'🖼',jpeg:'🖼',png:'🖼',webp:'🖼',bmp:'🖼',gif:'🖼',xlsx:'📊',xls:'📊',csv:'📋',tiff:'🖼',tif:'🖼',md:'📃'};
 let selFile=null,selFmt=null,blobUrl=null,blobName='';
