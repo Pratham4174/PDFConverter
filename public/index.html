@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FileForge — Free Online File Converter | PDF, Word, Image, Excel</title>
+<meta name="description" content="Convert PDF to Word, Word to PDF, JPG to PDF, PNG to PDF, Excel to CSV and 20+ more formats free online. No signup, no watermark, instant download."/>
+<meta name="keywords" content="file converter, pdf to word, word to pdf, jpg to pdf, png to pdf, image to pdf, pdf to jpg, excel to pdf, csv to xlsx, convert pdf online, free file converter, document converter, pdf converter, image converter, docx to pdf, pdf to docx"/>
+<meta name="author" content="FileForge"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://fileforge.app/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://fileforge.app/"/>
+<meta property="og:title" content="FileForge — Free Online File Converter | PDF, Word, Image, Excel"/>
+<meta property="og:description" content="Convert PDF to Word, Word to PDF, images to PDF and 20+ formats free. No signup required. Instant download."/>
+<meta property="og:site_name" content="FileForge"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="FileForge — Free Online File Converter"/>
+<meta name="twitter:description" content="Convert PDF, Word, Images, Excel — 20+ formats free online. No signup, no watermark."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"FileForge","url":"https://fileforge.app","description":"Free online file converter supporting PDF, Word, Excel, Images and more. Convert between 20+ formats instantly.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["PDF to Word converter","Word to PDF converter","JPG to PDF converter","PNG to PDF converter","Excel to PDF converter","CSV to Excel converter","No signup required","No watermark","Free forever"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert PDF to Word for free?","acceptedAnswer":{"@type":"Answer","text":"Upload your PDF on FileForge, select DOCX as the output format, and click Convert. Your Word file downloads instantly, free."}},{"@type":"Question","name":"How do I convert Word to PDF?","acceptedAnswer":{"@type":"Answer","text":"Upload your DOCX or DOC file, select PDF as the target format, and click Convert. No software installation needed."}},{"@type":"Question","name":"Can I convert images to PDF?","acceptedAnswer":{"@type":"Answer","text":"Yes. FileForge converts JPG, PNG, WEBP, BMP, GIF and TIFF images to PDF for free."}},{"@type":"Question","name":"Is FileForge free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free. No signup, no watermarks, no hidden limits."}},{"@type":"Question","name":"Are my files safe?","acceptedAnswer":{"@type":"Answer","text":"Files are processed and deleted immediately after conversion. We never store or share your files."}}]}</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#08090d;--surface:#111318;--surface2:#191c24;--border:#252836;--accent:#e8ff47;--accent2:#47c5ff;--accent3:#ff6b9d;--text:#eef0f8;--muted:#5a5f7a;--success:#47ffb2;--danger:#ff5f6d;--font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.5}
+.blob{position:fixed;border-radius:50%;filter:blur(140px);opacity:.06;pointer-events:none;z-index:0}
+.b1{width:600px;height:600px;background:var(--accent);top:-250px;left:-150px}.b2{width:500px;height:500px;background:var(--accent2);bottom:-200px;right:-100px}.b3{width:300px;height:300px;background:var(--accent3);top:40%;left:50%;transform:translate(-50%,-50%)}
+.wrap{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:0 24px 80px}
+header{display:flex;align-items:center;justify-content:space-between;padding:28px 0 20px;border-bottom:1px solid var(--border);margin-bottom:52px}
+.logo{font-family:var(--font-display);font-size:20px;font-weight:800;letter-spacing:-.5px}.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:8px}
+.nav-link{font-family:var(--font-mono);font-size:10px;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:6px 14px;border-radius:20px;cursor:pointer;transition:all .2s;letter-spacing:.5px}
+.nav-link:hover,.nav-link.active{color:var(--accent);border-color:var(--accent);background:rgba(232,255,71,.06)}
+.hero{text-align:center;margin-bottom:52px}.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,54px);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:14px}.hero h1 em{font-style:normal;color:var(--accent)}.hero p{font-size:15px;color:var(--muted);max-width:440px;margin:0 auto;line-height:1.7}
+.converter{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;margin-bottom:24px}
+.conv-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;margin-bottom:28px}
+.conv-slot{background:var(--surface2);border:1.5px dashed var(--border);border-radius:14px;padding:24px 20px;text-align:center;cursor:pointer;transition:all .25s;position:relative;min-height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.conv-slot:hover,.conv-slot.drag-over{border-color:var(--accent);background:rgba(232,255,71,.03)}.conv-slot.has-file{border-style:solid;border-color:rgba(71,255,178,.35);background:rgba(71,255,178,.04)}
+.conv-slot input{position:absolute;inset:0;opacity:0;cursor:pointer}.slot-icon{font-size:28px;margin-bottom:10px}.slot-label{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}.slot-hint{font-size:12px;color:var(--muted)}.slot-filename{font-family:var(--font-mono);font-size:11px;color:var(--success);margin-top:6px;word-break:break-all;padding:0 4px}
+.arrow-wrap{display:flex;flex-direction:column;align-items:center;gap:8px}.arrow{width:44px;height:44px;background:var(--surface2);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--muted)}
+.target-label{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+.format-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.pill{font-family:var(--font-mono);font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid var(--border);color:var(--muted);cursor:pointer;transition:all .2s;background:var(--surface2)}.pill:hover{border-color:var(--text);color:var(--text)}.pill.active{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:700}.pill.disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
+.convert-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--bg);font-family:var(--font-display);font-size:16px;font-weight:700;border:none;border-radius:12px;padding:16px;cursor:pointer;letter-spacing:-.3px;transition:all .2s}.convert-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 12px 40px rgba(232,255,71,.25)}.convert-btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.progress-wrap{display:none;margin-top:20px;background:var(--surface2);border-radius:12px;padding:20px}.progress-wrap.show{display:block;animation:fadeUp .3s ease}
+.prog-bar-track{height:3px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px}.prog-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));border-radius:2px;width:0%;transition:width .4s ease}
+.prog-text{font-family:var(--font-mono);font-size:11px;color:var(--muted);display:flex;justify-content:space-between}
+.result-wrap{display:none;margin-top:16px;background:rgba(71,255,178,.05);border:1px solid rgba(71,255,178,.2);border-radius:14px;padding:20px;animation:fadeUp .3s ease}.result-wrap.show{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.result-info{display:flex;align-items:center;gap:12px}.result-icon{width:40px;height:40px;background:rgba(71,255,178,.1);border:1px solid rgba(71,255,178,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}.result-title{font-family:var(--font-display);font-size:15px;font-weight:700}.result-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--success);border:1.5px solid rgba(71,255,178,.35);border-radius:10px;padding:10px 22px;font-family:var(--font-display);font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}.dl-btn:hover{background:rgba(71,255,178,.08);transform:translateY(-1px)}
+.error-box{display:none;margin-top:14px;background:rgba(255,95,109,.07);border:1px solid rgba(255,95,109,.25);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--danger)}.error-box.show{display:block}
+.tab-content{display:none}.tab-content.active{display:block;animation:fadeUp .3s ease}
+.support-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:16px}.support-table th{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;padding:8px 12px;text-align:left;border-bottom:1px solid var(--border)}.support-table td{padding:8px 12px;border-bottom:1px solid rgba(37,40,54,.5)}.support-table tr:hover td{background:var(--surface2)}.check{color:var(--success)}
+.formats-label{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}.formats-label::after{content:'';flex:1;height:1px;background:var(--border)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}.spin{animation:spin 1s linear infinite;display:inline-block}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--surface2)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.seo-card{display:flex;flex-direction:column;gap:3px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--text);transition:all .2s;font-size:13px}
+.seo-card:hover{border-color:var(--accent);background:rgba(232,255,71,.04);transform:translateY(-2px)}
+.seo-card strong{font-family:var(--font-display);font-size:13px;font-weight:700}
+.seo-sub{font-size:11px;color:var(--muted)}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px}
+.feature-card .feat-icon{font-size:24px;margin-bottom:10px}
+.feature-card h3{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:6px}
+.feature-card p{font-size:12px;color:var(--muted);line-height:1.6}
+.faq-list{display:flex;flex-direction:column;gap:8px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .2s}
+.faq-item:hover{border-color:rgba(232,255,71,.3)}
+.faq-item[open]{border-color:rgba(232,255,71,.3)}
+.faq-item summary{padding:14px 18px;cursor:pointer;font-weight:600;font-size:13.5px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-item summary::after{content:'﹢';color:var(--accent);font-size:18px;flex-shrink:0}
+.faq-item[open] summary::after{content:'﹣'}
+.faq-item p{padding:0 18px 16px;font-size:13px;color:var(--muted);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="wrap">
+  <header>
+    <div class="logo">File<span>Forge</span></div>
+    <div class="nav-links">
+      <span class="nav-link active" id="tab-convert-btn" onclick="switchTab('convert')">CONVERTER</span>
+
+    </div>
+  </header>
+
+  <!-- CONVERTER TAB -->
+  <div id="tab-convert" class="tab-content active">
+    <div class="hero">
+      <h1>Convert <em>anything</em><br>to anything</h1>
+      <p>PDF, Word, Images, Excel, CSV — all conversions handled locally. Free, fast, private.</p>
+    </div>
+    <div class="converter">
+      <div class="conv-grid">
+        <div class="conv-slot" id="dropZone">
+          <input type="file" id="fileInput" accept="*/*"/>
+          <div class="slot-icon">📂</div>
+          <div class="slot-label">Input File</div>
+          <div class="slot-hint" id="slotHint">Drop file or click to browse</div>
+          <div class="slot-filename" id="slotFilename"></div>
+        </div>
+        <div class="arrow-wrap">
+          <div class="arrow">→</div>
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.5px">CONVERT</div>
+        </div>
+        <div class="conv-slot has-file" id="outputSlot" style="cursor:default">
+          <div class="slot-icon" id="outputIcon">📄</div>
+          <div class="slot-label">Output File</div>
+          <div class="slot-hint" id="outputHint">Select a target format</div>
+          <div class="slot-filename" id="outputFilename"></div>
+        </div>
+      </div>
+      <div class="target-label">Convert to →</div>
+      <div class="format-pills" id="formatPills">
+        <span class="pill disabled" data-fmt="pdf">PDF</span>
+        <span class="pill disabled" data-fmt="docx">DOCX</span>
+        <span class="pill disabled" data-fmt="txt">TXT</span>
+        <span class="pill disabled" data-fmt="jpg">JPG</span>
+        <span class="pill disabled" data-fmt="png">PNG</span>
+        <span class="pill disabled" data-fmt="webp">WEBP</span>
+        <span class="pill disabled" data-fmt="bmp">BMP</span>
+        <span class="pill disabled" data-fmt="xlsx">XLSX</span>
+        <span class="pill disabled" data-fmt="csv">CSV</span>
+      </div>
+      <button class="convert-btn" id="convertBtn" disabled>
+        <span id="convertBtnText">Convert File</span><span>⚡</span>
+      </button>
+      <div class="progress-wrap" id="progressWrap">
+        <div class="prog-bar-track"><div class="prog-bar-fill" id="progBar"></div></div>
+        <div class="prog-text"><span id="progMsg"><span class="spin">◌</span> Converting…</span><span id="progPct">0%</span></div>
+      </div>
+      <div class="error-box" id="errorBox"></div>
+      <div class="result-wrap" id="resultWrap">
+        <div class="result-info">
+          <div class="result-icon">✅</div>
+          <div><div class="result-title">Conversion Complete!</div><div class="result-sub" id="resultSub"></div></div>
+        </div>
+        <button class="dl-btn" id="dlBtn">⬇ Download</button>
+      </div>
+    </div>
+    <div class="formats-label">Supported Conversions</div>
+    <table class="support-table">
+      <tr><th>From</th><th>To</th><th>Status</th></tr>
+      <tr><td>📄 PDF</td><td>DOCX, TXT, JPG, PNG</td><td class="check">✓ Supported</td></tr>
+      <tr><td>📝 DOCX / DOC</td><td>PDF</td><td class="check">✓ Supported</td></tr>
+      <tr><td>🖼 JPG / PNG / WEBP / BMP / GIF / TIFF</td><td>PDF</td><td class="check">✓ Supported</td></tr>
+      <tr><td>🖼 Any Image</td><td>JPG / PNG / WEBP / BMP</td><td class="check">✓ Supported</td></tr>
+      <tr><td>📊 XLSX / XLS</td><td>PDF, CSV</td><td class="check">✓ Supported</td></tr>
+      <tr><td>📋 CSV</td><td>PDF, XLSX</td><td class="check">✓ Supported</td></tr>
+      <tr><td>📃 TXT / MD</td><td>PDF</td><td class="check">✓ Supported</td></tr>
+    </table>
+
+    <!-- SEO: Popular conversions -->
+    <div style="margin-top:40px">
+      <div class="formats-label">Popular Conversions</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:40px">
+        <a href="#" onclick="preselectConversion('pdf','docx');return false;" class="seo-card"><span>📄→📝</span><strong>PDF to Word</strong><span class="seo-sub">Convert PDF to DOCX free</span></a>
+        <a href="#" onclick="preselectConversion('docx','pdf');return false;" class="seo-card"><span>📝→📄</span><strong>Word to PDF</strong><span class="seo-sub">Convert DOCX to PDF free</span></a>
+        <a href="#" onclick="preselectConversion('jpg','pdf');return false;" class="seo-card"><span>🖼→📄</span><strong>JPG to PDF</strong><span class="seo-sub">Convert image to PDF free</span></a>
+        <a href="#" onclick="preselectConversion('png','pdf');return false;" class="seo-card"><span>🖼→📄</span><strong>PNG to PDF</strong><span class="seo-sub">Convert PNG to PDF free</span></a>
+        <a href="#" onclick="preselectConversion('pdf','jpg');return false;" class="seo-card"><span>📄→🖼</span><strong>PDF to JPG</strong><span class="seo-sub">Extract pages as images</span></a>
+        <a href="#" onclick="preselectConversion('xlsx','csv');return false;" class="seo-card"><span>📊→📋</span><strong>Excel to CSV</strong><span class="seo-sub">Convert XLSX to CSV free</span></a>
+        <a href="#" onclick="preselectConversion('csv','xlsx');return false;" class="seo-card"><span>📋→📊</span><strong>CSV to Excel</strong><span class="seo-sub">Convert CSV to XLSX free</span></a>
+        <a href="#" onclick="preselectConversion('pdf','txt');return false;" class="seo-card"><span>📄→📃</span><strong>PDF to Text</strong><span class="seo-sub">Extract text from PDF</span></a>
+      </div>
+    </div>
+
+    <!-- SEO: Features -->
+    <section style="margin-bottom:40px">
+      <div class="formats-label">Why FileForge</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px">
+        <div class="feature-card"><div class="feat-icon">⚡</div><h3>Instant Conversion</h3><p>Files convert in seconds. No waiting, no queue, no email delivery.</p></div>
+        <div class="feature-card"><div class="feat-icon">🔒</div><h3>100% Private</h3><p>Files are deleted immediately after download. Never stored or shared.</p></div>
+        <div class="feature-card"><div class="feat-icon">🆓</div><h3>Always Free</h3><p>No signup, no credit card, no watermarks. Unlimited conversions.</p></div>
+        <div class="feature-card"><div class="feat-icon">🌐</div><h3>Works Everywhere</h3><p>Any browser, any device. Mac, Windows, iOS, Android. No installs.</p></div>
+      </div>
+    </section>
+
+    <!-- SEO: FAQ -->
+    <section style="margin-bottom:48px">
+      <div class="formats-label">Frequently Asked Questions</div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>How do I convert PDF to Word (DOCX) for free?</summary><p>Upload your PDF using the converter above, select <strong>DOCX</strong> as the target format, and click <strong>Convert File</strong>. Your Word document downloads in seconds — free, no signup.</p></details>
+        <details class="faq-item"><summary>How do I convert a Word document to PDF?</summary><p>Upload your <strong>.docx</strong> or <strong>.doc</strong> file, select <strong>PDF</strong> as the output, and click Convert. FileForge preserves your formatting and delivers a clean PDF instantly.</p></details>
+        <details class="faq-item"><summary>Can I convert JPG, PNG or images to PDF?</summary><p>Yes! FileForge supports <strong>JPG, PNG, WEBP, BMP, GIF, and TIFF</strong> to PDF conversion. You can also convert between image formats — PNG to JPG, WEBP to PNG and more.</p></details>
+        <details class="faq-item"><summary>Can I convert Excel (XLSX) to PDF or CSV?</summary><p>Yes. Upload your <strong>XLSX or XLS</strong> file and select <strong>PDF</strong> or <strong>CSV</strong>. FileForge converts the spreadsheet and delivers it instantly.</p></details>
+        <details class="faq-item"><summary>Is my file data safe?</summary><p>Files are processed and deleted immediately after your download is ready. We never store, log, or share your files.</p></details>
+        <details class="faq-item"><summary>Is there a file size limit?</summary><p>FileForge supports files up to <strong>50MB</strong>. For most documents and images this is more than sufficient.</p></details>
+      </div>
+    </section>
+  </div>
+
+  <!-- RESUME AI TAB -->
+  <div id="tab-resume" class="tab-content">
+    <div class="hero">
+      <h1>Tailor your resume to <em>any job</em></h1>
+      <p>Upload your resume, paste the JD — Claude rewrites it to match while keeping your template intact.</p>
+    </div>
+    <div class="converter">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px">
+        <div>
+          <div class="target-label">Your Resume (PDF or TXT)</div>
+          <div class="conv-slot" id="resumeDropZone" style="min-height:130px">
+            <input type="file" id="resumeFileInput" accept=".pdf,.txt"/>
+            <div class="slot-icon">📄</div>
+            <div class="slot-hint" id="resumeSlotHint">Drop resume here</div>
+            <div class="slot-filename" id="resumeFilename"></div>
+          </div>
+        </div>
+        <div>
+          <div class="target-label">Job Description</div>
+          <textarea id="jdText" style="width:100%;min-height:130px;background:var(--surface2);border:1.5px solid var(--border);border-radius:14px;color:var(--text);font-family:var(--font-body);font-size:13px;padding:14px;resize:vertical;outline:none;line-height:1.6" placeholder="Paste the full job description here…"></textarea>
+        </div>
+      </div>
+      <button class="convert-btn" id="resumeOptBtn" disabled>
+        <span id="resumeOptBtnText">Optimize My Resume</span><span>→</span>
+      </button>
+      <div class="progress-wrap" id="resumeProgressWrap">
+        <div class="prog-bar-track"><div class="prog-bar-fill" id="resumeProgBar"></div></div>
+        <div class="prog-text"><span id="resumeProgMsg"><span class="spin">◌</span> Analysing…</span><span id="resumeProgPct">0%</span></div>
+      </div>
+      <div class="error-box" id="resumeErrorBox"></div>
+      <div class="result-wrap" id="resumeResultWrap" style="flex-direction:column;align-items:flex-start">
+        <div class="result-info">
+          <div class="result-icon">✅</div>
+          <div><div class="result-title">Resume Optimized!</div><div class="result-sub" id="resumeMatchScore"></div></div>
+        </div>
+        <div id="resumeChangesList" style="background:var(--surface2);border-radius:10px;padding:14px;width:100%;max-height:180px;overflow-y:auto;margin:12px 0;font-size:12px"></div>
+        <button class="dl-btn" id="resumeDlBtn">⬇ Download Optimized Resume</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEO Footer -->
+<footer style="border-top:1px solid #252836;margin-top:0;padding:40px 24px;background:#08090d;position:relative;z-index:1">
+  <div style="max-width:900px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:32px;margin-bottom:32px">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;margin-bottom:12px">File<span style="color:#e8ff47">Forge</span></div>
+        <p style="font-size:12px;color:#5a5f7a;line-height:1.7">Free online file converter. Convert PDF, Word, Images, Excel and more — no signup, no watermark, instant download.</p>
+      </div>
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#5a5f7a;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">PDF Conversions</div>
+        <ul style="list-style:none;font-size:12px;color:#5a5f7a;line-height:2.2">
+          <li><a href="#" onclick="preselectConversion('pdf','docx');return false;" style="color:#5a5f7a;text-decoration:none;hover:color:#eef0f8">PDF to Word (DOCX)</a></li>
+          <li><a href="#" onclick="preselectConversion('pdf','txt');return false;" style="color:#5a5f7a;text-decoration:none">PDF to TXT</a></li>
+          <li><a href="#" onclick="preselectConversion('pdf','jpg');return false;" style="color:#5a5f7a;text-decoration:none">PDF to JPG</a></li>
+          <li><a href="#" onclick="preselectConversion('pdf','png');return false;" style="color:#5a5f7a;text-decoration:none">PDF to PNG</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#5a5f7a;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">To PDF</div>
+        <ul style="list-style:none;font-size:12px;color:#5a5f7a;line-height:2.2">
+          <li><a href="#" onclick="preselectConversion('docx','pdf');return false;" style="color:#5a5f7a;text-decoration:none">Word to PDF</a></li>
+          <li><a href="#" onclick="preselectConversion('jpg','pdf');return false;" style="color:#5a5f7a;text-decoration:none">JPG to PDF</a></li>
+          <li><a href="#" onclick="preselectConversion('png','pdf');return false;" style="color:#5a5f7a;text-decoration:none">PNG to PDF</a></li>
+          <li><a href="#" onclick="preselectConversion('xlsx','pdf');return false;" style="color:#5a5f7a;text-decoration:none">Excel to PDF</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#5a5f7a;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px">Other Formats</div>
+        <ul style="list-style:none;font-size:12px;color:#5a5f7a;line-height:2.2">
+          <li><a href="#" onclick="preselectConversion('csv','xlsx');return false;" style="color:#5a5f7a;text-decoration:none">CSV to Excel</a></li>
+          <li><a href="#" onclick="preselectConversion('xlsx','csv');return false;" style="color:#5a5f7a;text-decoration:none">Excel to CSV</a></li>
+          <li><a href="#" onclick="preselectConversion('png','jpg');return false;" style="color:#5a5f7a;text-decoration:none">PNG to JPG</a></li>
+          <li><a href="#" onclick="preselectConversion('jpg','png');return false;" style="color:#5a5f7a;text-decoration:none">JPG to PNG</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid #252836;padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <p style="font-size:11px;color:#5a5f7a">© 2026 FileForge · Free Online File Converter</p>
+      <p style="font-size:11px;color:#5a5f7a">
+        <a href="/terms.html" style="color:#5a5f7a;text-decoration:none;margin-right:12px">Terms</a>
+        <a href="/privacy.html" style="color:#5a5f7a;text-decoration:none;margin-right:12px">Privacy Policy</a>
+        <a href="/cookies.html" style="color:#5a5f7a;text-decoration:none">Cookie Policy</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#13141a;border-top:1px solid #252836;padding:16px 24px;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+  <p style="font-size:13px;color:#b0b3c6;max-width:600px;margin:0">🍪 We use cookies to serve ads and analyse traffic. By continuing you agree to our <a href="/cookies.html" style="color:#e8ff47">Cookie Policy</a> and <a href="/privacy.html" style="color:#e8ff47">Privacy Policy</a>.</p>
+  <div style="display:flex;gap:10px;flex-shrink:0">
+    <button onclick="declineCookies()" style="background:transparent;border:1px solid #252836;color:#5a5f7a;padding:8px 18px;border-radius:8px;cursor:pointer;font-size:13px">Decline</button>
+    <button onclick="acceptCookies()" style="background:#e8ff47;border:none;color:#08090d;padding:8px 20px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:700">Accept All</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+// Cookie consent
+function showCookieBanner(){const b=document.getElementById('cookieBanner');if(!localStorage.getItem('cookie_consent')){b.style.display='flex';}}
+function acceptCookies(){localStorage.setItem('cookie_consent','accepted');document.getElementById('cookieBanner').style.display='none';loadAnalytics();}
+function declineCookies(){localStorage.setItem('cookie_consent','declined');document.getElementById('cookieBanner').style.display='none';}
+function loadAnalytics(){/* Replace UA-XXXXX with your Google Analytics ID *//* const s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';document.head.appendChild(s); */}
+window.addEventListener('load',()=>{setTimeout(showCookieBanner,1500);if(localStorage.getItem('cookie_consent')==='accepted')loadAnalytics();});
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+function switchTab(n){document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.nav-link').forEach(x=>x.classList.remove('active'));document.getElementById('tab-'+n).classList.add('active');document.getElementById('tab-'+n+'-btn').classList.add('active');}
+// SEO quick-select: highlight the target pill when user clicks a popular conversion card
+function preselectConversion(fromExt, toFmt) {
+  switchTab('convert');
+  // Highlight the target format pill to guide the user
+  document.querySelectorAll('.pill').forEach(p => p.classList.remove('active','disabled'));
+  document.querySelectorAll('.pill').forEach(p => {
+    if (p.dataset.fmt !== toFmt) p.classList.add('disabled');
+    else p.classList.add('active');
+  });
+  // Update output slot label
+  document.getElementById('outputIcon').textContent = FMT_ICONS[toFmt] || '📄';
+  document.getElementById('outputHint').textContent = '';
+  document.getElementById('outputFilename').textContent = 'Upload a .' + fromExt + ' file to convert';
+  document.getElementById('outputSlot').classList.add('has-file');
+  // Scroll to converter
+  document.querySelector('.converter').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function apiUrl(p){const h=window.location.hostname;return(h&&h!=='localhost'&&h!=='127.0.0.1'&&!h.startsWith('192.'))?p:'http://localhost:3000'+p;}
+const CONV_MAP={pdf:['docx','txt','jpg','png'],docx:['pdf'],doc:['pdf'],jpg:['pdf','png','webp','bmp'],jpeg:['pdf','png','webp','bmp'],png:['pdf','jpg','webp','bmp'],webp:['pdf','jpg','png','bmp'],bmp:['pdf','jpg','png','webp'],gif:['pdf','jpg','png'],tiff:['pdf','jpg','png'],tif:['pdf','jpg','png'],xlsx:['pdf','csv'],xls:['pdf','csv'],csv:['pdf','xlsx'],txt:['pdf'],md:['pdf']};
+const FMT_ICONS={pdf:'📄',docx:'📝',txt:'📃',jpg:'🖼',jpeg:'🖼',png:'🖼',webp:'🖼',bmp:'🖼',gif:'🖼',xlsx:'📊',xls:'📊',csv:'📋',tiff:'🖼',tif:'🖼',md:'📃'};
+let selFile=null,selFmt=null,blobUrl=null,blobName='';
+const fileInput=document.getElementById('fileInput'),dropZone=document.getElementById('dropZone'),slotHint=document.getElementById('slotHint'),slotFilename=document.getElementById('slotFilename'),outputHint=document.getElementById('outputHint'),outputFilename=document.getElementById('outputFilename'),outputIcon=document.getElementById('outputIcon'),formatPills=document.getElementById('formatPills'),convertBtn=document.getElementById('convertBtn'),progressWrap=document.getElementById('progressWrap'),progBar=document.getElementById('progBar'),progMsg=document.getElementById('progMsg'),progPct=document.getElementById('progPct'),resultWrap=document.getElementById('resultWrap'),resultSub=document.getElementById('resultSub'),dlBtn=document.getElementById('dlBtn'),errorBox=document.getElementById('errorBox');
+dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('drag-over');});dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('drag-over'));dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('drag-over');if(e.dataTransfer.files[0])setFile(e.dataTransfer.files[0]);});fileInput.addEventListener('change',()=>{if(fileInput.files[0])setFile(fileInput.files[0]);});
+function setFile(f){selFile=f;selFmt=null;const ext=f.name.split('.').pop().toLowerCase();dropZone.classList.add('has-file');slotHint.textContent='';slotFilename.textContent=f.name;outputIcon.textContent=FMT_ICONS[ext]||'📄';outputHint.textContent='Pick a format below →';outputFilename.textContent='';resultWrap.classList.remove('show');errorBox.classList.remove('show');const allowed=CONV_MAP[ext]||[];document.querySelectorAll('.pill').forEach(p=>{p.classList.remove('active','disabled');if(!allowed.includes(p.dataset.fmt))p.classList.add('disabled');});convertBtn.disabled=true;}
+formatPills.addEventListener('click',e=>{const p=e.target.closest('.pill');if(!p||p.classList.contains('disabled'))return;document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));p.classList.add('active');selFmt=p.dataset.fmt;outputIcon.textContent=FMT_ICONS[selFmt]||'📄';outputHint.textContent='';outputFilename.textContent='→ '+selFile.name.replace(/\.[^.]+$/,'.'+selFmt);document.getElementById('outputSlot').classList.add('has-file');convertBtn.disabled=false;});
+convertBtn.addEventListener('click',async()=>{if(!selFile||!selFmt)return;errorBox.classList.remove('show');resultWrap.classList.remove('show');progressWrap.classList.add('show');convertBtn.disabled=true;document.getElementById('convertBtnText').textContent='Converting…';setProg(10,'Uploading file…');try{const fd=new FormData();fd.append('file',selFile);fd.append('targetFormat',selFmt);setProg(30,'Processing…');const ti=setInterval(()=>{const c=parseInt(progBar.style.width)||30;if(c<85)setProg(c+5,'Converting…');},400);const res=await fetch(apiUrl('/api/convert'),{method:'POST',body:fd});clearInterval(ti);if(!res.ok){const e=await res.json().catch(()=>({}));throw new Error(e.error||'Server error '+res.status);}const blob=await res.blob();if(blobUrl)URL.revokeObjectURL(blobUrl);blobUrl=URL.createObjectURL(blob);blobName=selFile.name.replace(/\.[^.]+$/,'')+'_converted.'+selFmt;setProg(100,'Done!');await sleep(400);progressWrap.classList.remove('show');resultSub.textContent=selFile.name+' → '+blobName;resultWrap.classList.add('show');}catch(err){progressWrap.classList.remove('show');errorBox.textContent='⚠ '+err.message;errorBox.classList.add('show');}finally{convertBtn.disabled=false;document.getElementById('convertBtnText').textContent='Convert File';}});
+dlBtn.addEventListener('click',()=>{if(!blobUrl)return;const a=document.createElement('a');a.href=blobUrl;a.download=blobName;a.click();});
+function setProg(p,m){progBar.style.width=p+'%';progPct.textContent=p+'%';progMsg.innerHTML=p<100?'<span class="spin">◌</span> '+m:'<span style="color:var(--success)">✓</span> '+m;}
+
+// Resume optimizer
+let resumeFile=null,resumeText='',resumeBlob=null;
+const rDrop=document.getElementById('resumeDropZone'),rInput=document.getElementById('resumeFileInput'),rHint=document.getElementById('resumeSlotHint'),rName=document.getElementById('resumeFilename'),jdText=document.getElementById('jdText'),rBtn=document.getElementById('resumeOptBtn'),rProgWrap=document.getElementById('resumeProgressWrap'),rProgBar=document.getElementById('resumeProgBar'),rProgMsg=document.getElementById('resumeProgMsg'),rProgPct=document.getElementById('resumeProgPct'),rResult=document.getElementById('resumeResultWrap'),rError=document.getElementById('resumeErrorBox'),rChanges=document.getElementById('resumeChangesList'),rDl=document.getElementById('resumeDlBtn');
+rDrop.addEventListener('dragover',e=>{e.preventDefault();rDrop.classList.add('drag-over');});rDrop.addEventListener('dragleave',()=>rDrop.classList.remove('drag-over'));rDrop.addEventListener('drop',e=>{e.preventDefault();rDrop.classList.remove('drag-over');if(e.dataTransfer.files[0])handleResume(e.dataTransfer.files[0]);});rInput.addEventListener('change',()=>{if(rInput.files[0])handleResume(rInput.files[0]);});
+async function handleResume(f){resumeFile=f;rName.textContent=f.name;rHint.textContent='';rDrop.classList.add('has-file');try{if(f.name.endsWith('.pdf')){const ab=await f.arrayBuffer();const pdf=await pdfjsLib.getDocument({data:ab}).promise;resumeText='';for(let i=1;i<=pdf.numPages;i++){const pg=await pdf.getPage(i);const ct=await pg.getTextContent();resumeText+=ct.items.map(x=>x.str).join(' ')+'\n';}}else{resumeText=await f.text();}}catch{resumeText='';}updateRBtn();}
+jdText.addEventListener('input',updateRBtn);function updateRBtn(){rBtn.disabled=!(resumeFile&&jdText.value.length>50);}
+rBtn.addEventListener('click',async()=>{rError.classList.remove('show');rResult.classList.remove('show');rProgWrap.classList.add('show');rBtn.disabled=true;document.getElementById('resumeOptBtnText').textContent='Optimizing…';setRProg(15,'Analysing resume…');try{const prompt=`You are an expert resume optimizer. Tailor the resume to the job description while:\n1. Keeping the exact same structure and sections\n2. NOT fabricating new skills, companies, or degrees\n3. Rewriting bullets using job description keywords naturally\n4. Quantifying achievements with existing data\n5. Improving action verbs to match the job language\n\nRESUME:\n${resumeText}\n\nJOB DESCRIPTION:\n${jdText.value}\n\nRespond ONLY with JSON (no markdown):\n{"optimizedResume":"full text","changes":[{"type":"changed","description":"..."}],"matchScore":"X% match"}`;setRProg(30,'Matching keywords…');const res=await fetch(apiUrl('/api/optimize'),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:4000,messages:[{role:'user',content:prompt}]})});setRProg(70,'Rewriting bullets…');if(!res.ok){const e=await res.json().catch(()=>({}));throw new Error(e.error?.message||'Error '+res.status);}const data=await res.json();const raw=data.content.map(b=>b.text||'').join('').replace(/```json|```/g,'').trim();let result;try{result=JSON.parse(raw);}catch{result={optimizedResume:raw,changes:[],matchScore:'Optimized'};}setRProg(90,'Generating PDF…');resumeBlob=genPDF(result.optimizedResume);setRProg(100,'Done!');await sleep(400);rProgWrap.classList.remove('show');document.getElementById('resumeMatchScore').textContent=result.matchScore||'';rChanges.innerHTML=(result.changes||[]).slice(0,10).map(c=>{const cl=c.type==='added'?'#47ffb2':c.type==='removed'?'#ff5f6d':'#47c5ff';return`<div style="display:flex;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)"><span style="font-family:var(--font-mono);font-size:9px;padding:2px 6px;border-radius:4px;background:${cl}22;color:${cl};flex-shrink:0">${c.type.toUpperCase()}</span><span>${c.description}</span></div>`;}).join('');rResult.classList.add('show');}catch(err){rProgWrap.classList.remove('show');rError.textContent='⚠ '+err.message;rError.classList.add('show');}finally{rBtn.disabled=false;document.getElementById('resumeOptBtnText').textContent='Optimize My Resume';updateRBtn();}});
+rDl.addEventListener('click',()=>{if(!resumeBlob)return;const a=document.createElement('a');a.href=URL.createObjectURL(resumeBlob);a.download=(resumeFile?.name||'resume').replace(/\.pdf$/i,'')+'_optimized.pdf';a.click();});
+function setRProg(p,m){rProgBar.style.width=p+'%';rProgPct.textContent=p+'%';rProgMsg.innerHTML=p<100?'<span class="spin">◌</span> '+m:'<span style="color:var(--success)">✓</span> '+m;}
+function genPDF(text){const{jsPDF}=window.jspdf;const doc=new jsPDF({unit:'pt',format:'letter'});const margin=50,pageW=doc.internal.pageSize.getWidth(),pageH=doc.internal.pageSize.getHeight(),maxW=pageW-margin*2;let y=margin,nameFound=false;for(const raw of text.split('\n')){const line=raw.trim();if(!line){y+=5;continue;}const isBullet=/^[•\-\*]\s/.test(line),isHeader=/^[A-Z][A-Z\s&\/\-]{3,}$/.test(line),isContact=/@|linkedin|github|\d{10}|\.com/.test(line.toLowerCase()),isDate=/\b(20\d\d|present|jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b/i.test(line);if(!nameFound&&!isBullet&&!isHeader&&line.length<50){nameFound=true;doc.setFont('Helvetica','bold');doc.setFontSize(20);doc.setTextColor(26,26,46);const nw=doc.getTextWidth(line),nx=(pageW-nw)/2;doc.text(line,nx,y);doc.setDrawColor(37,99,235);doc.setLineWidth(1.5);doc.line(nx,y+3,nx+nw,y+3);y+=24;continue;}if(isHeader){y+=6;doc.setFont('Helvetica','bold');doc.setFontSize(9);doc.setTextColor(26,26,46);doc.setFillColor(241,245,249);doc.roundedRect(margin-6,y-11,maxW+12,15,2,2,'F');doc.text(line,margin,y);doc.setDrawColor(37,99,235);doc.setLineWidth(.75);doc.line(margin,y+3,margin+maxW,y+3);y+=15;continue;}if(isBullet){doc.setFont('Helvetica','normal');doc.setFontSize(8.5);doc.setTextColor(31,41,55);for(const wl of doc.splitTextToSize('• '+line.replace(/^[•\-\*]\s/,''),maxW-8)){if(y>pageH-margin){doc.addPage();y=margin;}doc.text(wl,margin,y);y+=13;}continue;}if(isContact){doc.setFont('Helvetica','normal');doc.setFontSize(8.5);doc.setTextColor(107,112,145);const cw=doc.getTextWidth(line);doc.text(line,(pageW-cw)/2,y);y+=13;continue;}if(isDate){doc.setFont('Helvetica','normal');doc.setFontSize(8.5);doc.setTextColor(107,112,145);doc.text(line,margin,y);y+=13;continue;}doc.setFont('Helvetica','bold');doc.setFontSize(9.5);doc.setTextColor(26,26,46);for(const wl of doc.splitTextToSize(line,maxW)){if(y>pageH-margin){doc.addPage();y=margin;}doc.text(wl,margin,y);y+=14;}}return doc.output('blob');}
+</script>
+</body>
+</html>
