@@ -53,20 +53,20 @@ app.post('/api/convert', upload.single('file'), async (req, res) => {
 });
 
 // Also keep the resume optimizer endpoint
-app.post('/api/optimize', async (req, res) => {
-  try {
-    const axios = require('axios');
-    const { model, max_tokens, messages } = req.body;
-    if (!process.env.ANTHROPIC_API_KEY) return res.status(500).json({ error: { message: 'ANTHROPIC_API_KEY not configured.' } });
-    const response = await axios.post('https://api.anthropic.com/v1/messages',
-      { model, max_tokens, messages },
-      { headers: { 'Content-Type': 'application/json', 'x-api-key': process.env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' }, timeout: 60000 }
-    );
-    res.json(response.data);
-  } catch (err) {
-    res.status(err.response?.status || 500).json({ error: { message: err.response?.data?.error?.message || err.message } });
-  }
-});
+// app.post('/api/optimize', async (req, res) => {
+//   try {
+//     const axios = require('axios');
+//     const { model, max_tokens, messages } = req.body;
+//     if (!process.env.ANTHROPIC_API_KEY) return res.status(500).json({ error: { message: 'ANTHROPIC_API_KEY not configured.' } });
+//     const response = await axios.post('https://api.anthropic.com/v1/messages',
+//       { model, max_tokens, messages },
+//       { headers: { 'Content-Type': 'application/json', 'x-api-key': process.env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' }, timeout: 60000 }
+//     );
+//     res.json(response.data);
+//   } catch (err) {
+//     res.status(err.response?.status || 500).json({ error: { message: err.response?.data?.error?.message || err.message } });
+//   }
+// });
 
 function chunkText(text, font, size, maxWidth) {
   const words = text.split(' ');
