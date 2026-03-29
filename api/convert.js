@@ -4,7 +4,8 @@ const { Document, Packer, Paragraph, TextRun, HeadingLevel } = require('docx');
 const XLSX = require('xlsx');
 const pdfParse = require('pdf-parse');
 const mammoth = require('mammoth');
-//dhdbv
+const { Writable } = require('stream');
+
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -14,6 +15,9 @@ module.exports = async function handler(req, res) {
 
   try {
     const { fields, fileBuffer, originalName } = await parseForm(req);
+    if (!fileBuffer || !originalName) {
+      return res.status(400).json({ error: 'No file uploaded' });
+    }
     const targetFormat = Array.isArray(fields.targetFormat) ? fields.targetFormat[0] : fields.targetFormat;
     const inputExt = originalName.split('.').pop().toLowerCase();
     const baseName = originalName.replace(/\.[^.]+$/, '');
@@ -112,21 +116,30 @@ module.exports.config = { api: { bodyParser: false, responseLimit: '50mb' } };
 // Parse multipart form → returns buffer in memory
 function parseForm(req) {
   return new Promise((resolve, reject) => {
-    let fileBuffer = null, originalName = 'file', fields = {};
-    const form = new IncomingForm({ maxFileSize: 50*1024*1024 });
-    form.on('field', (name, val) => { fields[name] = val; });
-    form.on('file', (name, file) => { originalName = file.originalFilename || file.name || 'file'; });
-    form.on('fileBegin', (name, file) => {
-      const chunks = [];
-      file._writeStream = {
-        write(chunk){ chunks.push(Buffer.isBuffer(chunk)?chunk:Buffer.from(chunk)); },
-        end(){ fileBuffer = Buffer.concat(chunks); },
-        destroy(){}
-      };
+    let fileBuffer = null;
+    const form = new IncomingForm({
+      maxFileSize: 50 * 1024 * 1024,
+      fileWriteStreamHandler() {
+        const chunks = [];
+        return new Writable({
+          write(chunk, encoding, callback) {
+            chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk, encoding));
+            callback();
+          },
+          final(callback) {
+            fileBuffer = Buffer.concat(chunks);
+            callback();
+          }
+        });
+      }
     });
-    form.on('error', reject);
-    form.on('end', () => resolve({ fields, fileBuffer, originalName }));
-    form.parse(req);
+
+    form.parse(req, (err, fields, files) => {
+      if (err) return reject(err);
+      const fileEntry = Array.isArray(files.file) ? files.file[0] : files.file;
+      const originalName = fileEntry?.originalFilename || fileEntry?.newFilename || 'file';
+      resolve({ fields, fileBuffer, originalName });
+    });
   });
 }
 
