@@ -13,6 +13,16 @@
     }
   },
   "rewrites": [
+    { "source": "/pdf-to-word", "destination": "/pdf-to-word.html" },
+    { "source": "/word-to-pdf", "destination": "/word-to-pdf.html" },
+    { "source": "/jpg-to-pdf", "destination": "/jpg-to-pdf.html" },
+    { "source": "/png-to-pdf", "destination": "/png-to-pdf.html" },
+    { "source": "/excel-to-pdf", "destination": "/excel-to-pdf.html" },
+    { "source": "/pdf-to-text", "destination": "/pdf-to-text.html" },
+    { "source": "/png-to-jpg", "destination": "/png-to-jpg.html" },
+    { "source": "/jpg-to-png", "destination": "/jpg-to-png.html" },
+    { "source": "/xlsx-to-csv", "destination": "/xlsx-to-csv.html" },
+    { "source": "/csv-to-xlsx", "destination": "/csv-to-xlsx.html" },
     { "source": "/api/convert", "destination": "/api/convert.js" },
     { "source": "/api/optimize", "destination": "/api/optimize.js" },
     { "source": "/(.*)", "destination": "/$1" }

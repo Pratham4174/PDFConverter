@@ -12,4 +12,34 @@
   <url>
     <loc>https://freepdfconverter.vercel.app/cookies.html</loc>
   </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/pdf-to-word</loc>
+  </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/word-to-pdf</loc>
+  </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/jpg-to-pdf</loc>
+  </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/png-to-pdf</loc>
+  </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/excel-to-pdf</loc>
+  </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/pdf-to-text</loc>
+  </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/png-to-jpg</loc>
+  </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/jpg-to-png</loc>
+  </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/xlsx-to-csv</loc>
+  </url>
+  <url>
+    <loc>https://freepdfconverter.vercel.app/csv-to-xlsx</loc>
+  </url>
 </urlset>

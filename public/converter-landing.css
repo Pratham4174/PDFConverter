@@ -1,0 +1,26 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#08090d;--surface:#111318;--surface2:#191c24;--border:#252836;--accent:#e8ff47;--accent2:#47c5ff;--text:#eef0f8;--muted:#8e93ac;--font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'DM Mono',monospace}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7}
+.wrap{max-width:980px;margin:0 auto;padding:32px 24px 80px}
+.logo{font-family:var(--font-display);font-weight:800;font-size:20px;color:var(--text);text-decoration:none}
+.logo span{color:var(--accent)}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:22px;border-bottom:1px solid var(--border);margin-bottom:40px}
+.back{color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:8px 14px;border-radius:999px;font-size:13px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start;margin-bottom:32px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px}
+h1{font-family:var(--font-display);font-size:clamp(32px,5vw,54px);line-height:1.02;letter-spacing:-1.8px;margin-bottom:16px}
+h2{font-family:var(--font-display);font-size:24px;letter-spacing:-.6px;margin-bottom:14px}
+p{color:#c3c7d7;margin-bottom:14px}
+.eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:1.2px;color:var(--accent2);text-transform:uppercase;margin-bottom:12px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#08090d;text-decoration:none;font-family:var(--font-display);font-weight:700;padding:14px 20px;border-radius:14px;margin-top:8px}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:18px}
+.trust div,.card{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:16px}
+.trust strong,.card strong{display:block;font-family:var(--font-display);margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+ol,ul{padding-left:20px;color:#c3c7d7}
+li{margin-bottom:8px}
+.faq{display:grid;gap:12px}
+details{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 18px}
+summary{cursor:pointer;font-weight:600}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
+@media (max-width:800px){.hero{grid-template-columns:1fr}}
