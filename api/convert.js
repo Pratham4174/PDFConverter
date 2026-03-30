@@ -99,9 +99,9 @@ module.exports = async function handler(req, res) {
       return res.status(400).json({ error:`Conversion from .${inputExt} to .${targetFormat} is not supported.` });
     }
 
-    const outputName = `${baseName}_converted.${targetFormat}`;
+    const outputName = buildDownloadName(baseName, targetFormat);
     res.setHeader('Content-Type', mimeType);
-    res.setHeader('Content-Disposition', `attachment; filename="${outputName}"`);
+    res.setHeader('Content-Disposition', contentDispositionAttachment(outputName));
     res.setHeader('Content-Length', outputBuffer.length);
     return res.status(200).send(outputBuffer);
 
@@ -229,4 +229,26 @@ function imageMimeType(ext) {
     default:
       return 'application/octet-stream';
   }
+}
+
+function buildDownloadName(baseName, targetFormat) {
+  const safeBase = String(baseName || 'file')
+    .replace(/[\r\n"]/g, '')
+    .replace(/[^\x20-\x7E]+/g, '_')
+    .replace(/[^a-zA-Z0-9._ -]/g, '_')
+    .trim()
+    .replace(/\s+/g, ' ')
+    .slice(0, 120) || 'file';
+  const safeExt = String(targetFormat || 'bin')
+    .replace(/[^a-zA-Z0-9]/g, '')
+    .toLowerCase() || 'bin';
+  return `${safeBase}_converted.${safeExt}`;
+}
+
+function contentDispositionAttachment(filename) {
+  const fallback = filename.replace(/["\\]/g, '_');
+  const encoded = encodeURIComponent(filename)
+    .replace(/['()]/g, escape)
+    .replace(/\*/g, '%2A');
+  return `attachment; filename="${fallback}"; filename*=UTF-8''${encoded}`;
 }
