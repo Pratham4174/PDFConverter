@@ -5,6 +5,7 @@ const XLSX = require('xlsx');
 const pdfParse = require('pdf-parse');
 const mammoth = require('mammoth');
 const { Writable } = require('stream');
+const sharp = require('sharp');
 
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -27,14 +28,13 @@ module.exports = async function handler(req, res) {
 
     // Image → PDF
     if (imageExts.includes(inputExt) && targetFormat === 'pdf') {
-      const pdfDoc = await PDFDocument.create();
-      let img;
-      try { img = ['jpg','jpeg'].includes(inputExt) ? await pdfDoc.embedJpg(fileBuffer) : await pdfDoc.embedPng(fileBuffer); }
-      catch { img = await pdfDoc.embedJpg(fileBuffer); }
-      const page = pdfDoc.addPage([img.width, img.height]);
-      page.drawImage(img, { x:0, y:0, width:img.width, height:img.height });
-      outputBuffer = Buffer.from(await pdfDoc.save());
+      outputBuffer = await imageToPdfBuffer(fileBuffer);
       mimeType = 'application/pdf';
+    }
+    // Image → Image
+    else if (imageExts.includes(inputExt) && imageExts.includes(targetFormat)) {
+      outputBuffer = await convertImageBuffer(fileBuffer, targetFormat);
+      mimeType = imageMimeType(targetFormat);
     }
     // PDF → DOCX
     else if (inputExt === 'pdf' && ['doc','docx'].includes(targetFormat)) {
@@ -181,4 +181,52 @@ function chunkText(text, font, size, maxWidth) {
   }
   if(current)lines.push(current);
   return lines.length?lines:[text.substring(0,80)];
+}
+
+async function imageToPdfBuffer(fileBuffer) {
+  const pdfDoc = await PDFDocument.create();
+  const normalizedImage = await sharp(fileBuffer).png().toBuffer();
+  const img = await pdfDoc.embedPng(normalizedImage);
+  const page = pdfDoc.addPage([img.width, img.height]);
+  page.drawImage(img, { x: 0, y: 0, width: img.width, height: img.height });
+  return Buffer.from(await pdfDoc.save());
+}
+
+async function convertImageBuffer(fileBuffer, targetFormat) {
+  const pipeline = sharp(fileBuffer, { animated: false }).flatten({ background: '#ffffff' });
+  switch (targetFormat) {
+    case 'jpg':
+    case 'jpeg':
+      return pipeline.jpeg({ quality: 92 }).toBuffer();
+    case 'png':
+      return pipeline.png().toBuffer();
+    case 'webp':
+      return pipeline.webp({ quality: 92 }).toBuffer();
+    case 'gif':
+      return pipeline.gif().toBuffer();
+    case 'tif':
+    case 'tiff':
+      return pipeline.tiff({ quality: 92 }).toBuffer();
+    default:
+      throw new Error(`Conversion to .${targetFormat} is not supported.`);
+  }
+}
+
+function imageMimeType(ext) {
+  switch (ext) {
+    case 'jpg':
+    case 'jpeg':
+      return 'image/jpeg';
+    case 'png':
+      return 'image/png';
+    case 'webp':
+      return 'image/webp';
+    case 'gif':
+      return 'image/gif';
+    case 'tif':
+    case 'tiff':
+      return 'image/tiff';
+    default:
+      return 'application/octet-stream';
+  }
 }

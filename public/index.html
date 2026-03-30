@@ -121,7 +121,6 @@ header{display:flex;align-items:center;justify-content:space-between;padding:28p
         <span class="pill disabled" data-fmt="jpg">JPG</span>
         <span class="pill disabled" data-fmt="png">PNG</span>
         <span class="pill disabled" data-fmt="webp">WEBP</span>
-        <span class="pill disabled" data-fmt="bmp">BMP</span>
         <span class="pill disabled" data-fmt="xlsx">XLSX</span>
         <span class="pill disabled" data-fmt="csv">CSV</span>
       </div>
@@ -144,10 +143,10 @@ header{display:flex;align-items:center;justify-content:space-between;padding:28p
     <div class="formats-label">Supported Conversions</div>
     <table class="support-table">
       <tr><th>From</th><th>To</th><th>Status</th></tr>
-      <tr><td>📄 PDF</td><td>DOCX, TXT, JPG, PNG</td><td class="check">✓ Supported</td></tr>
+      <tr><td>📄 PDF</td><td>DOCX, TXT</td><td class="check">✓ Supported</td></tr>
       <tr><td>📝 DOCX / DOC</td><td>PDF</td><td class="check">✓ Supported</td></tr>
       <tr><td>🖼 JPG / PNG / WEBP / BMP / GIF / TIFF</td><td>PDF</td><td class="check">✓ Supported</td></tr>
-      <tr><td>🖼 Any Image</td><td>JPG / PNG / WEBP / BMP</td><td class="check">✓ Supported</td></tr>
+      <tr><td>🖼 Any Image</td><td>JPG / PNG / WEBP</td><td class="check">✓ Supported</td></tr>
       <tr><td>📊 XLSX / XLS</td><td>PDF, CSV</td><td class="check">✓ Supported</td></tr>
       <tr><td>📋 CSV</td><td>PDF, XLSX</td><td class="check">✓ Supported</td></tr>
       <tr><td>📃 TXT / MD</td><td>PDF</td><td class="check">✓ Supported</td></tr>
@@ -155,7 +154,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:28p
 
     <section style="margin-top:28px;margin-bottom:40px;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 22px">
       <div class="formats-label" style="margin-bottom:12px">About The Brand</div>
-      <p style="font-size:14px;line-height:1.8;color:#b0b3c6">Free PDF Converter is the public name of this tool, and many users search for it as <strong>FreePDFConverter</strong>. This site focuses on quick document conversion workflows like PDF to Word, Word to PDF, JPG to PDF, PNG to PDF, Excel to CSV, and PDF text extraction.</p>
+      <p style="font-size:14px;line-height:1.8;color:#b0b3c6">Free PDF Converter is the public name of this tool, and many users search for it as <strong>FreePDFConverter</strong>. This site focuses on quick document conversion workflows like PDF to Word, Word to PDF, JPG to PDF, PNG to PDF, Excel to CSV, image format conversion, and PDF text extraction.</p>
     </section>
 
     <!-- SEO: Popular conversions -->
@@ -166,7 +165,6 @@ header{display:flex;align-items:center;justify-content:space-between;padding:28p
         <a href="#" onclick="preselectConversion('docx','pdf');return false;" class="seo-card"><span>📝→📄</span><strong>Word to PDF</strong><span class="seo-sub">Convert DOCX to PDF free</span></a>
         <a href="#" onclick="preselectConversion('jpg','pdf');return false;" class="seo-card"><span>🖼→📄</span><strong>JPG to PDF</strong><span class="seo-sub">Convert image to PDF free</span></a>
         <a href="#" onclick="preselectConversion('png','pdf');return false;" class="seo-card"><span>🖼→📄</span><strong>PNG to PDF</strong><span class="seo-sub">Convert PNG to PDF free</span></a>
-        <a href="#" onclick="preselectConversion('pdf','jpg');return false;" class="seo-card"><span>📄→🖼</span><strong>PDF to JPG</strong><span class="seo-sub">Extract pages as images</span></a>
         <a href="#" onclick="preselectConversion('xlsx','csv');return false;" class="seo-card"><span>📊→📋</span><strong>Excel to CSV</strong><span class="seo-sub">Convert XLSX to CSV free</span></a>
         <a href="#" onclick="preselectConversion('csv','xlsx');return false;" class="seo-card"><span>📋→📊</span><strong>CSV to Excel</strong><span class="seo-sub">Convert CSV to XLSX free</span></a>
         <a href="#" onclick="preselectConversion('pdf','txt');return false;" class="seo-card"><span>📄→📃</span><strong>PDF to Text</strong><span class="seo-sub">Extract text from PDF</span></a>
@@ -245,7 +243,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:28p
   <div style="max-width:900px;margin:0 auto">
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:32px;margin-bottom:32px">
       <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;margin-bottom:12px">File<span style="color:#e8ff47">Forge</span></div>
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;margin-bottom:12px">freepdf<span style="color:#e8ff47">converter</span></div>
         <p style="font-size:12px;color:#5a5f7a;line-height:1.7">Free online file converter. Convert PDF, Word, Images, Excel and more — no signup, no watermark, instant download.</p>
       </div>
       <div>
@@ -253,8 +251,6 @@ header{display:flex;align-items:center;justify-content:space-between;padding:28p
         <ul style="list-style:none;font-size:12px;color:#5a5f7a;line-height:2.2"> 
           <li><a href="#" onclick="preselectConversion('pdf','docx');return false;" style="color:#5a5f7a;text-decoration:none;hover:color:#eef0f8">PDF to Word (DOCX)</a></li>
           <li><a href="#" onclick="preselectConversion('pdf','txt');return false;" style="color:#5a5f7a;text-decoration:none">PDF to TXT</a></li>
-          <li><a href="#" onclick="preselectConversion('pdf','jpg');return false;" style="color:#5a5f7a;text-decoration:none">PDF to JPG</a></li>
-          <li><a href="#" onclick="preselectConversion('pdf','png');return false;" style="color:#5a5f7a;text-decoration:none">PDF to PNG</a></li>
         </ul>
       </div>
       <div>
@@ -326,7 +322,7 @@ function preselectConversion(fromExt, toFmt) {
   document.querySelector('.converter').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function apiUrl(p){const h=window.location.hostname;const isLocal=!h||h==='localhost'||h==='127.0.0.1'||h.startsWith('192.');return isLocal?'http://localhost:3000'+p:p;}
-const CONV_MAP={pdf:['docx','txt','jpg','png'],docx:['pdf'],doc:['pdf'],jpg:['pdf','png','webp','bmp'],jpeg:['pdf','png','webp','bmp'],png:['pdf','jpg','webp','bmp'],webp:['pdf','jpg','png','bmp'],bmp:['pdf','jpg','png','webp'],gif:['pdf','jpg','png'],tiff:['pdf','jpg','png'],tif:['pdf','jpg','png'],xlsx:['pdf','csv'],xls:['pdf','csv'],csv:['pdf','xlsx'],txt:['pdf'],md:['pdf']};
+const CONV_MAP={pdf:['docx','txt'],docx:['pdf'],doc:['pdf'],jpg:['pdf','png','webp'],jpeg:['pdf','png','webp'],png:['pdf','jpg','webp'],webp:['pdf','jpg','png'],bmp:['pdf','jpg','png','webp'],gif:['pdf','jpg','png','webp'],tiff:['pdf','jpg','png','webp'],tif:['pdf','jpg','png','webp'],xlsx:['pdf','csv'],xls:['pdf','csv'],csv:['pdf','xlsx'],txt:['pdf'],md:['pdf']};
 const FMT_ICONS={pdf:'📄',docx:'📝',txt:'📃',jpg:'🖼',jpeg:'🖼',png:'🖼',webp:'🖼',bmp:'🖼',gif:'🖼',xlsx:'📊',xls:'📊',csv:'📋',tiff:'🖼',tif:'🖼',md:'📃'};
 let selFile=null,selFmt=null,blobUrl=null,blobName='';
 const fileInput=document.getElementById('fileInput'),dropZone=document.getElementById('dropZone'),slotHint=document.getElementById('slotHint'),slotFilename=document.getElementById('slotFilename'),outputHint=document.getElementById('outputHint'),outputFilename=document.getElementById('outputFilename'),outputIcon=document.getElementById('outputIcon'),formatPills=document.getElementById('formatPills'),convertBtn=document.getElementById('convertBtn'),progressWrap=document.getElementById('progressWrap'),progBar=document.getElementById('progBar'),progMsg=document.getElementById('progMsg'),progPct=document.getElementById('progPct'),resultWrap=document.getElementById('resultWrap'),resultSub=document.getElementById('resultSub'),dlBtn=document.getElementById('dlBtn'),errorBox=document.getElementById('errorBox');
